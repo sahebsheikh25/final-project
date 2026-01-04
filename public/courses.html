@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Courses – SN Security</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="store.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="assets/logo.svg" alt="SN Security">
+        <span>SN Security</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<main class="container store-main">
+  <header class="store-header">
+    <div class="store-brand">
+      <img class="store-logo" src="assets/logo.svg" alt="SN Security courses logo">
+      <div>
+        <h1>Courses</h1>
+        <div class="sub">Instructor-led courses & hands-on labs</div>
+      </div>
+    </div>
+
+    <div class="store-controls">
+      <a id="backLink" class="back-btn" href="./index.html" role="button" aria-label="Go back">Back to Home</a>
+      <div class="search-wrap">
+        <input id="searchInput" placeholder="Search courses, keywords..." aria-label="Search courses">
+        <button id="clearSearch" title="Clear search">✕</button>
+      </div>
+
+      <div class="filters" role="tablist" aria-label="Course categories">
+        <button class="filter-btn active" data-cat="all">All</button>
+        <button class="filter-btn" data-cat="beginner">Beginner</button>
+        <button class="filter-btn" data-cat="intermediate">Intermediate</button>
+        <button class="filter-btn" data-cat="advanced">Advanced</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="store-main">
+    <div id="productGrid" class="product-grid" aria-live="polite"></div>
+  </section>
+</main>
+
+<div id="productModal" class="modal" aria-hidden="true">
+  <div class="modal-panel">
+    <button class="modal-close" aria-label="Close">✕</button>
+    <div class="modal-body">
+      <img id="modalImg" src="" alt="Course image">
+      <div class="modal-info">
+        <h2 id="modalTitle"></h2>
+        <div id="modalCategory" class="muted"></div>
+        <p id="modalDesc"></p>
+        <div class="modal-actions">
+          <button id="modalBuy" class="btn neon">Enroll / Open</button>
+          <button id="modalClose" class="btn ghost">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast" aria-hidden="true"></div>
+
+<script src="../ads.js" defer></script>
+<script src="../courses.js"></script>
+</body>
+</html>
